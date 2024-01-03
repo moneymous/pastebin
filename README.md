@@ -32,14 +32,15 @@ This is a simple project where we wrote a simple Pastebin clone in Rust using Ax
    # How to use the API
    After running the backend app
 
-   Send a post request to `http://127.0.0.1:3000/make-paste` to make a paste. There should be a paste body and lang.
-   Example request:-
-   ```json
-   {
-       "paste": "<h1>Hello, world!</h1>",
-       "lang": "html"
-   }
-   ```
 
+   # To make a paste
+   Send a post request to `http://127.0.0.1:3000/make-paste`, containing `paste` in your request body, where you have to add all the text that you want to paste. Then You will get a JSON response containing `id`, which is the ID of your paste, that you can use to access your paste.
 
+   # To get a paste
    Send a get request to `https://127.0.0.1:8000/get-paste/id/<paste-id>`, where `<paste-id>` is your paste ID, to get a paste. You will get a JSON response, containing `lang` and `paste`, where `lang` is the language in which the code is written and `paste` is the code.
+
+
+
+
+
+   **IMPORTANT NOTE**: This project is still under development, and the backend ain't capable of error handling yet.
