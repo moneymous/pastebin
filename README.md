@@ -34,7 +34,7 @@ This is a simple project where we wrote a simple Pastebin clone in Rust using Ax
 
    Send a post request to `http://127.0.0.1:3000/make-paste` to make a paste. There should be a paste body and lang.
    Example request:-
-   ```
+   ```json
    {
        "paste": "<h1>Hello, world!</h1>",
        "lang": "html"
